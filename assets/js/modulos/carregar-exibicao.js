@@ -27,9 +27,9 @@ const alterarTitleConsultaProduto = (dadosProduto) => {
 
 const carregar = (categoria, nome) => {
   const produtosCategoria = Array();
-  categoria.forEach((produto, index) => {
+  categoria.forEach((produto) => {
     const categoriaURL = (nome.toLowerCase()).replaceAll(' ','-');
-    const URLproduto = {categoriaURL, index};
+    const URLproduto = {categoriaURL};
     produtosCategoria.push(criarCardProdutosExibicaoHome(produto, URLproduto));
   })
   return produtosCategoria;

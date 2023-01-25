@@ -1,11 +1,11 @@
 import { converterValor } from './utilitarios.js';
 
-const criarCardProdutosExibicaoHome = (dados, {categoriaURL, index}) => {
+const criarCardProdutosExibicaoHome = (dados, {categoriaURL}) => {
 
-  const URL = `./produto.html?categoria=${categoriaURL}&id=${index}`;
+  const URL = `./produto.html?categoria=${categoriaURL}&id=${dados.id}`;
 
   const link = document.createElement('a');
-  link.dataset.produto = index;
+  link.dataset.produto = dados.id;
   link.href = URL;
 
   const itemLista = document.createElement('li');
@@ -44,10 +44,6 @@ const criarCardProdutosExibicaoHome = (dados, {categoriaURL, index}) => {
   link.appendChild(itemLista)
 
   return link;
-}
-
-const criarCardProdutosPaginaTodosProdutos = (dados, {categoriaURL, index}) => {
-  return criarCardProdutosExibicaoHome(dados, categoriaURL, index);
 }
 
 const criarSecaoProdutos = (nomeSecao, cards) => {
