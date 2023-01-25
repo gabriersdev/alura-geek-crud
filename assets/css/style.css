@@ -58,3 +58,7 @@ a, button{
 .none{
   display: none;
 }
+
+.label-destaque span{
+  font-weight: 500;
+}

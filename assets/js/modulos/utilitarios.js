@@ -1,3 +1,5 @@
+import { produtosExibicaoHome } from "./conteudos-produtos.js";
+
 const converterParaMesBRL = (numero) => {
   let mes = null;
 
@@ -24,6 +26,13 @@ const converterValor = (valor) => {
   return valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
 }
 
+const controleFechamentoModal = (modal) => {
+  const btnFecha = modal.querySelector('[data-modal-fecha]');
+  btnFecha.addEventListener('click', () => {
+    modal.close();
+  })
+}
+
 const controlarModal = () => {
   const botaoModal = document.querySelectorAll('[data-direito-autorais]');
   botaoModal.forEach(botao => {
@@ -31,12 +40,13 @@ const controlarModal = () => {
       const modal = document.querySelector('[data-modal]');
       modal.showModal();
       
-      const btnFecha = modal.querySelector('[data-modal-fecha]');
-      btnFecha.addEventListener('click', () => {
-        modal.close();
-      })
+      controleFechamentoModal(modal);
     })
   });
+}
+
+const verificarIDProduto = (id) => {
+  return produtosExibicaoHome[id] !== undefined;
 }
 
 const mascararCamposMonetarios = (campo) => {
@@ -54,8 +64,10 @@ const URLPaginaErro = './erro.html';
 
 export{
   converterParaMesBRL,
+  controleFechamentoModal,
   controlarModal,
   converterValor,
   URLPaginaErro,
-  mascararCamposMonetarios
+  mascararCamposMonetarios,
+  verificarIDProduto
 }

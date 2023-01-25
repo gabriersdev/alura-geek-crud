@@ -21,7 +21,7 @@ const carregarDadosProdutoPesquisado = (dadosProduto) => {
   secao.querySelector('p').textContent = dadosProduto.descricao;
 }
 
-const retornarDadosProdutoPesquisado = (id) => {
+const retornarDadosProduto = (id) => {
   const produto = produtosExibicaoHome[id];
 
   if(produto == null){
@@ -50,5 +50,5 @@ export{
   carregarProdutosPaginaProduto,
   carregarDadosProdutoPesquisado,
   alterarTitleConsultaProduto,
-  retornarDadosProdutoPesquisado
+  retornarDadosProduto
 }

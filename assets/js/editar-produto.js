@@ -1,4 +1,4 @@
-import { retornarDadosProdutoPesquisado } from './modulos/carregar-exibicao.js';
+import { retornarDadosProduto } from './modulos/carregar-exibicao.js';
 import { mascararCamposMonetarios, URLPaginaErro, converterValor } from './modulos/utilitarios.js'
 
 (() => {
@@ -11,7 +11,7 @@ import { mascararCamposMonetarios, URLPaginaErro, converterValor } from './modul
   if(dadosGET.get('id') !== null){
 
     const id = dadosGET.get('id');
-    const dados = retornarDadosProdutoPesquisado(id);
+    const dados = retornarDadosProduto(id);
 
     if(dados !== false){
       
