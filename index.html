@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="keywords" content="Geek, StarWars, Consoles, E-comerce">
+  <meta name="author" content="Gabriel Ribeiro">
+  <meta property="og:title" content="Home - Alura Geek">
+  <meta property="og:description" content="Esta é a Alura Geek. Uma loja de produtos do mundo Nerd e relacionados. Confira o nosso catálogo de produtos :)">
+  <meta property="og:url" content="#">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net/; img-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; script-src 'self'">
+  
+  <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <!-- Importação da Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  
+  <title>Home - Alura Geek</title>
+</head>
+<body>
+  
+  <div class="all">
+    <nav class="menu">
+      <div class="logo">
+        <i class="bi bi-controller logo__icone"></i>
+        <h3 class="logo__titulo-destaque">Alura</h3>
+        <h3 class="logo__titulo">Geek</h3>
+      </div>
+      
+      <form action="" method="post" class="menu__form-group">
+        <input type="text" name="" id="" class="menu__form-group__input" placeholder="O que deseja encontrar?" required>
+        <button class="menu__form-group__botao"><i class="bi bi-search"></i></button>
+      </form>
+      
+      <a href="./login.html" class="menu__botao">Login</a>
+    </nav>
+    
+    <header class="cabecalho">
+      <h1 class="cabecalho__titulo"><span data-mes-atual>Janeiro</span> Promocional</h1>
+      <p class="cabecalho__descricao">Produtos selecionados com 33% de desconto</p>
+      <a href="" class="cabecalho__botao">Ver consoles</a>
+    </header>
+    
+    <main class="conteudo">
+      <section class="produtos">
+        
+      </section>
+    </main>
+    
+    <footer class="rodape">
+      <div class="rodape__principal">
+        <div class="logo">
+          <i class="bi bi-controller logo__icone"></i>
+          <h3 class="logo__titulo-destaque">Alura</h3>
+          <h3 class="logo__titulo">Geek</h3>
+        </div>
+        
+        <div class="rodape__lista">
+          <ul class="lista">
+            <li class="lista__item"><a href="" class="lista__item__link">Quem somos nós</a></li>
+            <li class="lista__item"><a href="" class="lista__item__link">Política de privacidade</a></li>
+            <li class="lista__item"><a href="" class="lista__item__link">Programa fidelidade</a></li>
+            <li class="lista__item"><a href="" class="lista__item__link">Nossas lojas</a></li>
+            <li class="lista__item"><a href="" class="lista__item__link">Quero ser franqueado</a></li>
+            <li class="lista__item"><a href="" class="lista__item__link">Anuncie aqui</a></li>
+          </ul>
+        </div>
+        
+        <form action="" class="rodape__contato">
+          <h5 class="rodape__contato__titulo">Fale conosco</h5>
+          <div class="form__grupo">
+            <label for="nome" class="rodape__contato__descricao-input">Nome</label>
+            <input type="text" class="rodape__contato__input" id="nome" data-input="nome" placeholder="Nome" maxlength="20" required>
+            <span class="feedback-validacao none"></span>
+          </div>
+          
+          <div class="form__grupo">
+            <label for="mensagem" class="rodape__contato__descricao-input">Mensagem</label>
+            <input type="text" class="rodape__contato__input" id="mensagem" data-input="mensagem" placeholder="Escreva sua mensagem" maxlength="60" required>
+            <span class="feedback-validacao none"></span>
+          </div>
+          
+          <button type="submit" class="rodape__contato__botao">Enviar mensagem</button>
+        </form>
+      </div>
+      
+      <div class="rodape__tarja">
+        <p class="rodape__tarja__creditos">Desenvolvido por Gabriel Ribeiro</p>
+        <p class="rodape__tarja__creditos">Baseado em um protótipo elaborado pelo ONE. <a class="link-visivel" data-direito-autorais>Direitos Autorais</a></p>
+        <time class="rodape__tarja__ano"><i class="bi bi-c-circle"></i>&nbsp;<span data-ano-atual>2023</span></time>
+      </div>
+    </footer>
+  </div>
+
+  <div class="overlay-2">
+    <div class="lds-ring-2"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <section data-importacoes-html></section>
+
+  <noscript>
+    <div class="box-no-script">         
+      <div class="texto-pagina-centralizado-alt">
+        <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o 
+          <span class="destaque-pagina-centralizado">Javascript desabilitado</span></h2><br>
+          
+        <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
+          
+        <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo site</p><br>
+        <button data-recarrega-pagina class="btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+      </div>
+    </div>
+  </noscript>
+  
+  <script type="module" src="./assets/js/scripts.js"></script>
+  <script type="module" src="./assets/js/home.js"></script>
+</body>
+</html>

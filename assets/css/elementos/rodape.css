@@ -1,0 +1,116 @@
+.rodape{
+  display: block;
+}
+
+.rodape__principal{
+  height: 100%;
+  padding: 2rem var(--tamanho-margem-exibicao);
+  background-color: var(--azul-clarissimo);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.rodape__lista{
+  display: flex;
+  align-items: center;
+}
+
+.rodape__lista .lista{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rodape__lista .lista__item{
+  display: block;
+  margin: 0;
+}
+
+.rodape__lista .lista__item__link:hover{
+  text-decoration: underline;
+}
+
+.rodape__contato{
+  width: 45%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  flex-flow: row wrap;
+}
+
+.rodape__contato__titulo{
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.rodape__contato__descricao-input{
+  /* Estilização no diretório de componentes */
+}
+
+.rodape__contato__input{  
+  /* Estilização no diretório de componentes */
+}
+
+.rodape__contato__input:last-child{
+  /* Estilização no diretório de componentes */
+}
+
+.rodape__contato__input:focus{
+  /* Estilização no diretório de componentes */
+}
+
+.rodape__contato__botao{
+  /* Estilização no diretório de componentes */
+}
+
+.rodape__contato__botao:hover{
+  /* Estilização no diretório de componentes */
+}
+
+.rodape__tarja{
+  padding: 1rem var(--tamanho-margem-exibicao);
+
+  background-color: var(--cor-da-tarja-rodape);
+  color: var(--cor-de-texto);
+
+  text-align: center;
+  line-height: 2;
+}
+
+@media screen and (max-width: 767px) {
+  .rodape__tarja{
+    margin-top: 0;
+    padding: 2rem 2rem;
+  }
+
+  .rodape__tarja__creditos{
+    line-height: 1.25;
+  }
+  
+  .rodape__tarja__creditos{
+    margin-bottom: 1rem;
+  }
+
+  .rodape__tarja__creditos:last-child{
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .rodape__principal{
+    flex-direction: column;
+  }
+
+  .rodape__lista  .lista__item{
+    margin: 0.25rem 0;
+  }
+
+  .rodape__contato{
+    width: 100%;
+  }
+}

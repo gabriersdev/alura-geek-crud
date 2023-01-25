@@ -1,0 +1,39 @@
+/* Estilização apenas para a página produto.html */
+
+.produto__consultado{
+  display: flex;
+  align-items: center;
+}
+
+.produto__consultado__imagem{
+  width: 40%;
+}
+
+.produto__consultado__info{
+  margin-left: var(--tamanho-margem-exibicao);
+}
+
+.produto__consultado__info__titulo{
+  font-size: var(--tamanho-fonte-h1);
+  text-transform: capitalize;
+}
+
+.produto__consultado__valor{
+  font-weight: 700;
+  font-size: var(--tamanho-fonte-texto-descricao);
+  margin: 1rem 0;
+}
+
+.produto__consultado__descricao{
+  display: initial;
+}
+
+.produto__consultado__valor,
+.produto__consultado__descricao{
+  display: inline-block;
+  font-size: var(--tamanho-fonte-texto-descricao);
+}
+
+.produtos{
+  margin-top: var(--tamanho-margem-exibicao);
+}

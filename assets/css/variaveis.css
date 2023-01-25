@@ -1,0 +1,38 @@
+:root{
+
+  --cor-de-fundo: #F5F5F5;
+  --cor-do-menu: #FFF;
+  --cor-da-tarja-rodape: #FFF;
+
+  --branco: #FFF;
+  --preto: #464646;
+  --preto-50: #A2A2A2;
+  --azul: #2A7AE4;
+  --azul-50: #5595E9;
+  --azul-claro-forte: #9DC1F6;
+  --azul-claro-medio: #B1D0FF;
+  --azul-clarissimo: #EAF2FD;
+  --vermelho: #FF0000;
+
+  --tamanho-margem-exibicao: 5rem;
+
+  --tamanho-fonte-h1: 3.5rem;
+  --tamanho-fonte-h2: 2rem;
+
+  --tamanho-fonte-texto-descricao: 1.25rem;
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  :root{
+    --tamanho-margem-exibicao: 1.5rem;
+
+    --tamanho-fonte-h1: 2.5rem;
+    --tamanho-fonte-h2: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1000px){
+  :root{
+    --tamanho-margem-exibicao: 2rem;
+  }
+}

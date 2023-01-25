@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <meta name="keywords" content="Geek, StarWars, Consoles, E-comerce">
+  <meta name="author" content="Gabriel Ribeiro">
+  <meta property="og:title" content="Erro - Alura Geek">
+  <meta property="og:description" content="Esta é a Alura Geek. Uma loja de produtos do mundo Nerd e relacionados. Confira o nosso catálogo de produtos :)">
+  <meta property="og:url" content="#">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net/; img-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; script-src 'self'"> 
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <!-- Importação da Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  
+  <title>Erro - Alura Geek</title>
+</head>
+<body>
+  
+  <div class="all">
+    <nav class="menu">
+      <div class="logo">
+        <i class="bi bi-controller logo__icone"></i>
+        <h3 class="logo__titulo-destaque">Alura</h3>
+        <h3 class="logo__titulo">Geek</h3>
+      </div>
+    </nav>
+    
+    <main class="conteudo">
+      <div class="box-mensagem">         
+        <div class="texto-pagina-centralizado-alt">
+          <h2 class="titulo-texto-pagina-centralizado">Opa, desculpe!<br>
+            <span class="destaque-pagina-centralizado">Ocorreu um erro inesperado</span></h2><br>
+            
+          <p class="label-texto-pagina-centralizado">Algo inesperado aconteceu e não foi possível carregar o conteúdo da página. Verifique se o link que você chegou até aqui é válido, retorne a página inicial ou recarregue a página</p><br>
+
+          <a href="./index.html"><button class="btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Voltar para o início</button></a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <noscript>
+    <div class="box-no-script">         
+      <div class="texto-pagina-centralizado-alt">
+        <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o 
+          <span class="destaque-pagina-centralizado">Javascript desabilitado</span></h2><br>
+          
+        <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
+          
+        <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo site</p><br>
+        <button data-recarrega-pagina class="btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+      </div>
+    </div>
+  </noscript>
+</body>
+</html>

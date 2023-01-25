@@ -1,0 +1,25 @@
+.alert{
+  margin: 1rem 0;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+}
+.alert.erro{
+  background-color: var(--azul-clarissimo);
+  border-color: var(--azul);
+  color: var(--azul);
+}
+
+.alert__titulo{
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.alert__titulo::after{
+  content: "!";
+}
+
+.alert__descricao{
+  line-height: 1.25;
+}

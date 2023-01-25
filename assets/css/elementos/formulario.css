@@ -1,0 +1,33 @@
+.formulario{
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form__grupo, 
+.form__grupo__controle{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form__grupo__controle{
+  position: relative;
+}
+
+.formulario__botao-input{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  padding: 0.5rem 0.75rem;
+
+  border: none;
+  border-radius: 0.25R;
+}
+
+.formulario__botao{
+  /* Estilização no diretório de componentes */
+}

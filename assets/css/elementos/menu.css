@@ -1,0 +1,68 @@
+.menu{
+  background-color: var(--cor-do-menu);
+  padding: 1.5rem var(--tamanho-margem-exibicao);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__form-group{
+  margin-left: 1rem;
+  flex-grow: 1;
+  display: flex;
+}
+
+.menu__form-group__input{
+  padding: 0.75rem 5%;
+  padding-right: 0;
+  border-radius: 2rem 0 0 2rem; 
+}
+
+.menu__form-group__input::placeholder{
+  color: var(--preto-50);
+}
+
+.menu__form-group__input:focus,
+.menu__form-group__botao:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.menu__form-group__input, 
+.menu__form-group__botao{
+  background-color: var(--cor-de-fundo);
+  border: none;
+}
+
+.menu__form-group__botao{
+  border-radius: 0 2rem 2rem 0;
+  padding: 0.75rem 5%;
+  padding-left: 0;
+  margin-left: -5px;
+  color: var(--preto-50);
+}
+
+.menu__botao{
+  /* Estilização no diretório de componentes */
+}
+
+.menu__botao:hover{
+  /* Estilização no diretório de componentes */
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .menu{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu__form-group{
+    margin-left: 0;
+  }
+
+  .menu__botao{
+    margin-top: 1rem;
+  }
+  
+}

@@ -1,0 +1,29 @@
+.cabecalho{
+  background: url(../../img/hero.png) center / cover no-repeat;
+  height: 350px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 3rem var(--tamanho-margem-exibicao);
+  color: var(--branco);
+}
+
+.cabecalho__titulo{
+  font-size: var(--tamanho-fonte-h1);
+  text-transform: capitalize;
+}
+
+.cabecalho__descricao{
+  font-size: var(--tamanho-fonte-texto-descricao);
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.cabecalho__botao{
+  /* Estilização no diretório de componentes */
+}
+
+.cabecalho__botao:hover{
+  /* Estilização no diretório de componentes */
+}
