@@ -39,6 +39,10 @@
   margin: 0.5rem 0;
 }
 
+.lista a{
+  position: relative;
+}
+
 .lista a,
 .produtos__cabecalho__botao:focus{
   outline: none;

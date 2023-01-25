@@ -10,16 +10,20 @@ import { carregarProdutosHome } from "./modulos/carregar-exibicao.js"
 
       const botaoExcluir = document.createElement('button');
       botaoExcluir.innerHTML = '<i class="bi bi-trash"></i>';
-      botaoExcluir.classList.value = 'botao-exclui-produto';
+      botaoExcluir.classList.value = 'controle__crud__btn-exclui';
 
       const linkEditar = document.createElement('a');
       linkEditar.innerHTML = '<i class="bi bi-pencil-square"></i>';
-      linkEditar.classList.value = 'botao-edita-produto';
+      linkEditar.classList.value = 'controle__crud__btn-edita';
 
       console.log(linkEditar);
 
-      figure.appendChild(botaoExcluir);
-      figure.appendChild(linkEditar);
+      const div = document.createElement('div');
+      div.classList.value = 'controle__crud';
+      div.appendChild(botaoExcluir);
+      div.appendChild(linkEditar);
+      
+      figure.appendChild(div);
     })
 
   }

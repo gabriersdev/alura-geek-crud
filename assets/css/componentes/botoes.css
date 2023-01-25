@@ -37,3 +37,24 @@
 .formulario__botao{
   width: 100%;
 }
+
+.controle__crud__btn-exclui, 
+.controle__crud__btn-edita{
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.35rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: var(--azul-clarissimo);
+}
+
+.controle__crud__btn-exclui:hover, 
+.controle__crud__btn-edita:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--branco);
+}
+
+.controle__crud__btn-exclui{
+  margin-right: 0.25rem;
+}

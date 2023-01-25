@@ -1,5 +1,7 @@
 /* Estilização apenas para a página todos-produtos.html */
 
+@import url(../elementos/controle-crud.css);
+
 .produtos__cabecalho{
   display: none;
 }

@@ -1,0 +1,10 @@
+.controle__crud{
+  top: 1rem;
+  right: 0.25rem;
+  position: absolute;
+}
+
+.controle__crud__btn-exclui, 
+.controle__crud__btn-edita{
+  /* Estilizações no diretório de componentes */
+}
