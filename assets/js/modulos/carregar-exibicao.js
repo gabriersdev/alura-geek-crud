@@ -15,7 +15,7 @@ const carregarProdutosPaginaProduto = (categoria, nomeCategoria) => {
 
 const carregarDadosProdutoPesquisado = (dadosProduto) => {
   const secao = document.querySelector('[data-dados-produto]');
-  secao.querySelector('img').src = `./assets/img/produtos/${dadosProduto.imagem}`;
+  secao.querySelector('img').src = `./${dadosProduto.imagem}`;
   secao.querySelector('h1').textContent = dadosProduto.nomeProduto;
   secao.querySelector('span').textContent = converterValor(dadosProduto.valor);
   secao.querySelector('p').textContent = dadosProduto.descricao;

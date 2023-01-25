@@ -39,7 +39,7 @@ import { tratarFormulario, confirmacaoFormulario } from "./modulos/tratamento-fo
         <li>Bootstrap Icons</li>
         <li>Symple Mask Money</li>
       </ul>
-      <button data-modal-fecha>Fechar</button>
+      <button data-modal-fecha class='modal__botao'>Fechar</button>
     </dialog>`;
 
     areaImportacao.innerHTML = conteudoParaImportar;
