@@ -18,7 +18,6 @@ const criarCardProdutosExibicaoHome = (dados, {categoriaURL, index}) => {
   img.setAttribute('alt', dados.nomeProduto);
   img.setAttribute('src', `./assets/img/produtos/${dados.imagem}`);
 
-
   const figurecaption = document.createElement('figurecaption');
   figurecaption.classList.add('lista__item__figura__descricao');
 

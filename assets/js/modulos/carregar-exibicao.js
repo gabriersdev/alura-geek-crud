@@ -19,6 +19,7 @@ const carregarDadosProdutoPesquisado = (dadosProduto) => {
   secao.querySelector('img').src = `./assets/img/produtos/${dadosProduto.imagem}`;
   secao.querySelector('h1').textContent = dadosProduto.nomeProduto;
   secao.querySelector('span').textContent = converterValor(dadosProduto.valor);
+  secao.querySelector('p').textContent = dadosProduto.descricao;
 }
 
 const alterarTitleConsultaProduto = (dadosProduto) => {
