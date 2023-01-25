@@ -17,7 +17,7 @@ const criarCardProdutosExibicaoHome = (dados, {categoriaURL}) => {
   const img = document.createElement('img');
   img.classList.add('lista__item__figura__imagem');
   img.setAttribute('alt', dados.nomeProduto);
-  img.setAttribute('src', `./assets/img/produtos/${dados.imagem}`);
+  img.setAttribute('src', `${dados.imagem}`);
 
   const figurecaption = document.createElement('figurecaption');
   figurecaption.classList.add('lista__item__figura__descricao');

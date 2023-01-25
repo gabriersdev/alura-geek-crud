@@ -1,7 +1,7 @@
 const produtosExibicaoHome = [
   {
     id: 0,
-    imagem: 'canecasw.png',
+    imagem:'./assets/img/produtos/canecasw.png',
     nomeProduto: 'Caneca',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -9,7 +9,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 1,
-    imagem: 'legosw.png',
+    imagem:'./assets/img/produtos/legosw.png',
     nomeProduto: 'Lego',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -17,7 +17,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 2,
-    imagem: 'yoda.png',
+    imagem:'./assets/img/produtos/yoda.png',
     nomeProduto: 'Boneco Yoda',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -25,7 +25,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 3,
-    imagem: 'stormtropper.png',
+    imagem:'./assets/img/produtos/stormtropper.png',
     nomeProduto: 'Soldado',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -33,7 +33,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 4,
-    imagem: 'babyyoda.png',
+    imagem:'./assets/img/produtos/babyyoda.png',
     nomeProduto: 'Baby Yoda',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -41,7 +41,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 5,
-    imagem: 'mandalorian.png',
+    imagem:'./assets/img/produtos/mandalorian.png',
     nomeProduto: 'Mandalorian',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -50,7 +50,7 @@ const produtosExibicaoHome = [
   
   {
     id: 6,
-    imagem: 'jsxbox.png',
+    imagem:'./assets/img/produtos/jsxbox.png',
     nomeProduto: 'Controle XBOX',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -58,7 +58,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 7,
-    imagem: 'ps5.png',
+    imagem:'./assets/img/produtos/ps5.png',
     nomeProduto: 'PS5',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -66,7 +66,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 8,
-    imagem: 'snes.png',
+    imagem:'./assets/img/produtos/snes.png',
     nomeProduto: 'Nintendo Legado',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -74,7 +74,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 9,
-    imagem: 'switch.png',
+    imagem:'./assets/img/produtos/switch.png',
     nomeProduto: 'Nintendo Switch',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -82,7 +82,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 10,
-    imagem: 'console.png',
+    imagem:'./assets/img/produtos/console.png',
     nomeProduto: 'XBOX Series X',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -90,7 +90,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 11,
-    imagem: 'gba.png',
+    imagem:'./assets/img/produtos/gba.png',
     nomeProduto: 'Console',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -99,7 +99,7 @@ const produtosExibicaoHome = [
   
   {
     id: 12,
-    imagem: 'atari.png',
+    imagem:'./assets/img/produtos/atari.png',
     nomeProduto: 'Camiseta Atari',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -107,7 +107,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 13,
-    imagem: 'camisasnes.png',
+    imagem:'./assets/img/produtos/camisasnes.png',
     nomeProduto: 'Camiseta Nintendo',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -115,7 +115,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 14,
-    imagem: 'sonic.png',
+    imagem:'./assets/img/produtos/sonic.png',
     nomeProduto: 'Sonic Figure',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -123,7 +123,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 15,
-    imagem: 'relogio.png',
+    imagem:'./assets/img/produtos/relogio.png',
     nomeProduto: 'Relógio Digital',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -131,7 +131,7 @@ const produtosExibicaoHome = [
   },
   {
     id: 16,
-    imagem: 'vr.png',
+    imagem:'./assets/img/produtos/vr.png',
     nomeProduto: 'Óculos VR',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
@@ -139,15 +139,13 @@ const produtosExibicaoHome = [
   },
   {
     id: 17,
-    imagem: 'pikachu.png',
+    imagem:'./assets/img/produtos/pikachu.png',
     nomeProduto: 'Picachu',
     valor: 60.0,
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
     categoria: 'diversos',
   },
 ]
-
-
 
 export{
   produtosExibicaoHome

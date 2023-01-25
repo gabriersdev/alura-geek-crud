@@ -21,6 +21,16 @@ const carregarDadosProdutoPesquisado = (dadosProduto) => {
   secao.querySelector('p').textContent = dadosProduto.descricao;
 }
 
+const retornarDadosProdutoPesquisado = (id) => {
+  const produto = produtosExibicaoHome[id];
+
+  if(produto == null){
+    return false;
+  }
+  
+  return produto;
+}
+
 const alterarTitleConsultaProduto = (dadosProduto) => {
   document.title = `${dadosProduto.nomeProduto} - Alura Geek`; 
 }
@@ -39,5 +49,6 @@ export{
   carregarProdutosHome,
   carregarProdutosPaginaProduto,
   carregarDadosProdutoPesquisado,
-  alterarTitleConsultaProduto
+  alterarTitleConsultaProduto,
+  retornarDadosProdutoPesquisado
 }
