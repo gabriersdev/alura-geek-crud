@@ -1,5 +1,5 @@
 import { retornarDadosProdutoPesquisado } from './modulos/carregar-exibicao.js';
-import { mascararCamposMonetarios, URLPaginaErro } from './modulos/utilitarios.js'
+import { mascararCamposMonetarios, URLPaginaErro, converterValor } from './modulos/utilitarios.js'
 
 (() => {
 
@@ -15,7 +15,13 @@ import { mascararCamposMonetarios, URLPaginaErro } from './modulos/utilitarios.j
 
     if(dados !== false){
       
-      console.log(dados);
+      const formulario = document.querySelector('.formulario');
+
+      formulario.querySelector(`[data-input="URL"]`).value = `${dados.imagem}`;
+      formulario.querySelector(`[data-input="categoria"]`).value = dados.categoria;
+      formulario.querySelector(`[data-input="nome-produto"]`).value = dados.nomeProduto;
+      formulario.querySelector(`[data-input="preco"]`).value = converterValor(dados.valor);
+      formulario.querySelector(`[data-input="descricao"]`).value = dados.descricao;
 
     }else{
       window.location.href = URLPaginaErro;
