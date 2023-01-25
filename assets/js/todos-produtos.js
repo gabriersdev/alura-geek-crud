@@ -11,12 +11,12 @@ import { carregarProdutosHome } from "./modulos/carregar-exibicao.js"
       const botaoExcluir = document.createElement('button');
       botaoExcluir.innerHTML = '<i class="bi bi-trash"></i>';
       botaoExcluir.classList.value = 'controle__crud__btn-exclui';
+      botaoExcluir.dataset.botaoExcluirProduto = `${produto.dataset.produto}`;
 
       const linkEditar = document.createElement('a');
       linkEditar.innerHTML = '<i class="bi bi-pencil-square"></i>';
       linkEditar.classList.value = 'controle__crud__btn-edita';
-
-      console.log(linkEditar);
+      linkEditar.href = `./editar-produto.html?id=${produto.dataset.produto}`;
 
       const div = document.createElement('div');
       div.classList.value = 'controle__crud';

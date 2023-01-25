@@ -5,7 +5,7 @@ const criarCardProdutosExibicaoHome = (dados, {categoriaURL, index}) => {
   const URL = `./produto.html?categoria=${categoriaURL}&id=${index}`;
 
   const link = document.createElement('a');
-  link.dataset.produto = '';
+  link.dataset.produto = index;
   link.href = URL;
 
   const itemLista = document.createElement('li');
