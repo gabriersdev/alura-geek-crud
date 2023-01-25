@@ -29,8 +29,8 @@ import { URLPaginaErro } from "./modulos/utilitarios.js";
         break;
     }
 
-    const dadosProduto = idGET !== null ? produtosExibicaoHome[idGET] : undefined;
-    const ehValido = (dadosProduto !== undefined) !== null;
+    const dadosProduto = idGET !== null && idGET !== undefined ? produtosExibicaoHome[idGET] : undefined;
+    const ehValido = (dadosProduto !== undefined);
 
     if(ehValido){
       carregarProdutosPaginaProduto(categoria, nomeCategoria);
