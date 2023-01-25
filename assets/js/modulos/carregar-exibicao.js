@@ -7,7 +7,6 @@ const carregarProdutosHome = () => {
   criarSecaoProdutos('Star Wars', carregar(produtosExibicaoHome.starWars, 'Star Wars'));
   criarSecaoProdutos('Consoles', carregar(produtosExibicaoHome.consoles, 'Consoles'));
   criarSecaoProdutos('Diversos', carregar(produtosExibicaoHome.diversos, 'Diversos'));
-  
 }
 
 const carregarProdutosPaginaProduto = (categoria, nomeCategoria) => {

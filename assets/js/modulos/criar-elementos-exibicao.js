@@ -4,11 +4,12 @@ const criarCardProdutosExibicaoHome = (dados, {categoriaURL, index}) => {
 
   const URL = `./produto.html?categoria=${categoriaURL}&id=${index}`;
 
+  const link = document.createElement('a');
+  link.dataset.produto = '';
+  link.href = URL;
+
   const itemLista = document.createElement('li');
   itemLista.classList.add('lista__item');
-
-  const link = document.createElement('a');
-  link.href = URL;
 
   const figure = document.createElement('figure');
   figure.classList.add('lista__item__figura');
@@ -30,7 +31,6 @@ const criarCardProdutosExibicaoHome = (dados, {categoriaURL, index}) => {
   figurecaption.appendChild(h5);
   figurecaption.appendChild(span);
 
-
   const linkBotao = document.createElement('a');
   linkBotao.href = URL;
   linkBotao.classList.add('lista__item__figura__botao');
@@ -44,6 +44,10 @@ const criarCardProdutosExibicaoHome = (dados, {categoriaURL, index}) => {
   link.appendChild(itemLista)
 
   return link;
+}
+
+const criarCardProdutosPaginaTodosProdutos = (dados, {categoriaURL, index}) => {
+  return criarCardProdutosExibicaoHome(dados, categoriaURL, index);
 }
 
 const criarSecaoProdutos = (nomeSecao, cards) => {
