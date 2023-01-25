@@ -4,9 +4,9 @@ import { converterValor } from "./utilitarios.js";
 
 const carregarProdutosHome = () => {
 
-  criarSecaoProdutos('Star Wars', carregar(produtosExibicaoHome.starWars, 'Star Wars'));
-  criarSecaoProdutos('Consoles', carregar(produtosExibicaoHome.consoles, 'Consoles'));
-  criarSecaoProdutos('Diversos', carregar(produtosExibicaoHome.diversos, 'Diversos'));
+  criarSecaoProdutos('Star Wars', carregar(produtosExibicaoHome.filter(produto => produto.categoria == 'starWars'), 'Star Wars'));
+  criarSecaoProdutos('Consoles', carregar(produtosExibicaoHome.filter(produto => produto.categoria == 'consoles'), 'Consoles'));
+  criarSecaoProdutos('Diversos', carregar(produtosExibicaoHome.filter(produto => produto.categoria == 'diversos'), 'Diversos'));
 }
 
 const carregarProdutosPaginaProduto = (categoria, nomeCategoria) => {

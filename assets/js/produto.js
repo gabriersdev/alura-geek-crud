@@ -17,15 +17,15 @@ import { URLPaginaErro } from "./modulos/utilitarios.js";
 
     switch(nomeCategoria){
       case 'star-wars':
-        categoria = produtosExibicaoHome.starWars;
+        categoria = produtosExibicaoHome.filter(produto => produto.categoria == 'starWars');
         break;
   
       case 'consoles':
-        categoria = produtosExibicaoHome.consoles;
+        categoria = produtosExibicaoHome.filter(produto => produto.categoria == 'consoles');
         break;
       
       case 'diversos':
-        categoria = produtosExibicaoHome.diversos;
+        categoria = produtosExibicaoHome.filter(produto => produto.categoria == 'diversos');
         break;
     }
 
