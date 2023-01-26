@@ -9,16 +9,20 @@ const tratarFormulario = () => {
       const requerido = evento.target.validity.valueMissing; //Verifica se há required e se não está preenchido
       const tipo = evento.target.validity.typeMismatch; //O valor correponde ao tipo
       
+      let mensagem = '';
+      
       if(tipo){
+        mensagem = `${input.getAttribute('placeholder')} está inválido`
         campoFeedback.classList.toggle('none');
-        campoFeedback.textContent = `${input.getAttribute('placeholder')} está inválido`;
       }
 
       if(requerido){
+        mensagem = 'Preenchimento necessário'
         campoFeedback.classList.toggle('none');
-        campoFeedback.textContent = 'Preenchimento necessário';
       }
 
+      campoFeedback.textContent = mensagem;
+      input.setCustomValidity(mensagem);
     })
   });
 }

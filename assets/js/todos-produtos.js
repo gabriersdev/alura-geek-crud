@@ -4,7 +4,6 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
 ( ()  => {
 
   const adicionarControlesCRUD = () => {
-    
     const produtos = document.querySelectorAll('[data-produto]');
     produtos.forEach(produto => {
       const figure = produto.querySelector('figure');
@@ -26,33 +25,30 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
       
       figure.appendChild(div);
     })
+  }
 
-    const acoesControlesCRUD = () => {
-      const botoesExclui = document.querySelectorAll('[data-botao-excluir-produto]');
-      botoesExclui.forEach(botao => {
-        botao.addEventListener('click', (evento) => {
-          
-          const id = botao.dataset.botaoExcluirProduto;
-          verificarIDProduto(id) ? exibirModalConfirmacaoExclusao(id) : console.log('O ID informado não é válido!');
+  const acoesControlesCRUD = () => {
+    const botoesExclui = document.querySelectorAll('[data-botao-excluir-produto]');
+    botoesExclui.forEach(botao => {
+      botao.addEventListener('click', (evento) => {
+        
+        const id = botao.dataset.botaoExcluirProduto;
+        verificarIDProduto(id) ? exibirModalConfirmacaoExclusao(id) : console.log('O ID informado não é válido!');
 
-          evento.preventDefault();
-        })
-      });
-    }
+        evento.preventDefault();
+      })
+    });
+  }
 
-    const exibirModalConfirmacaoExclusao = (id) => {
-      const modal = document.querySelector('[data-modal-exclui-produto]');
-      modal.showModal();
+  const exibirModalConfirmacaoExclusao = (id) => {
+    const modal = document.querySelector('[data-modal-exclui-produto]');
+    modal.showModal();
 
-      const dados = retornarDadosProduto(id);
-      modal.querySelector('[data-input-dados-produto="nome"]').textContent = dados.nomeProduto;
-      modal.querySelector('[data-input-dados-produto="categoria"]').textContent = dados.categoria;
+    const dados = retornarDadosProduto(id);
+    modal.querySelector('[data-input-dados-produto="nome"]').textContent = dados.nomeProduto;
+    modal.querySelector('[data-input-dados-produto="categoria"]').textContent = dados.categoria;
 
-      controleFechamentoModal(modal);
-    }
-
-    acoesControlesCRUD();
-
+    controleFechamentoModal(modal);
   }
 
   async function carregarProdutos(){
@@ -62,5 +58,6 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
   }
 
   carregarProdutos();
+  acoesControlesCRUD();
 
 })();

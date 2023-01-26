@@ -46,7 +46,11 @@ const controlarModal = () => {
 }
 
 const verificarIDProduto = (id) => {
-  return produtosExibicaoHome[id] !== undefined;
+  return produtosExibicaoHome[id] !== undefined && produtosExibicaoHome[id] !== null;
+}
+
+const isEmpty = (valor) => {
+  return valor !== undefined && valor !== null;
 }
 
 const mascararCamposMonetarios = (campo) => {
@@ -60,14 +64,19 @@ const mascararCamposMonetarios = (campo) => {
   });
 }
 
-const URLPaginaErro = './erro.html';
+const redirecionarPaginaErro = () => {
+  const URLPaginaErro = './erro.html';
+
+  window.location.href = URLPaginaErro;
+}
 
 export{
   converterParaMesBRL,
   controleFechamentoModal,
   controlarModal,
   converterValor,
-  URLPaginaErro,
+  redirecionarPaginaErro,
+  isEmpty,
   mascararCamposMonetarios,
   verificarIDProduto
 }

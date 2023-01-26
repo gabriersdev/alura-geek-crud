@@ -1,6 +1,6 @@
 import { carregarProdutosPaginaProduto, carregarDadosProdutoPesquisado, alterarTitleConsultaProduto } from "./modulos/carregar-exibicao.js";
 import { produtosExibicaoHome } from "./modulos/conteudos-produtos.js";
-import { URLPaginaErro } from "./modulos/utilitarios.js";
+import { isEmpty, redirecionarPaginaErro, verificarIDProduto } from "./modulos/utilitarios.js";
 
 (() => {
 
@@ -29,8 +29,8 @@ import { URLPaginaErro } from "./modulos/utilitarios.js";
         break;
     }
 
-    const dadosProduto = idGET !== null && idGET !== undefined ? produtosExibicaoHome[idGET] : undefined;
-    const ehValido = (dadosProduto !== undefined);
+    const dadosProduto = verificarIDProduto(idGET) ? produtosExibicaoHome[idGET] : undefined;
+    const ehValido = (isEmpty(dadosProduto));
 
     if(ehValido){
       carregarProdutosPaginaProduto(categoria, nomeCategoria);
@@ -39,13 +39,13 @@ import { URLPaginaErro } from "./modulos/utilitarios.js";
     }
 
     else{
-      window.location.href = URLPaginaErro;
+      redirecionarPaginaErro();
     }
     
   }
   
   else{
-    window.location.href = URLPaginaErro;
+    redirecionarPaginaErro();
   }
 
 })();

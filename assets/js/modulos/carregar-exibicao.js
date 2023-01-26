@@ -3,7 +3,6 @@ import { criarCardProdutosExibicaoHome, criarSecaoProdutos } from './criar-eleme
 import { converterValor } from "./utilitarios.js";
 
 const carregarProdutosHome = () => {
-
   criarSecaoProdutos('Star Wars', carregar(produtosExibicaoHome.filter(produto => produto.categoria == 'starWars'), 'Star Wars'));
   criarSecaoProdutos('Consoles', carregar(produtosExibicaoHome.filter(produto => produto.categoria == 'consoles'), 'Consoles'));
   criarSecaoProdutos('Diversos', carregar(produtosExibicaoHome.filter(produto => produto.categoria == 'diversos'), 'Diversos'));
@@ -19,6 +18,16 @@ const carregarDadosProdutoPesquisado = (dadosProduto) => {
   secao.querySelector('h1').textContent = dadosProduto.nomeProduto;
   secao.querySelector('span').textContent = converterValor(dadosProduto.valor);
   secao.querySelector('p').textContent = dadosProduto.descricao;
+}
+
+const carregarDadosPaginaEdicao = (dados) => {
+  const formulario = document.querySelector('.formulario');
+
+  formulario.querySelector(`[data-input="URL"]`).value = `${dados.imagem}`;
+  formulario.querySelector(`[data-input="categoria"]`).value = dados.categoria;
+  formulario.querySelector(`[data-input="nome-produto"]`).value = dados.nomeProduto;
+  formulario.querySelector(`[data-input="preco"]`).value = converterValor(dados.valor);
+  formulario.querySelector(`[data-input="descricao"]`).value = dados.descricao;
 }
 
 const retornarDadosProduto = (id) => {
@@ -49,6 +58,7 @@ export{
   carregarProdutosHome,
   carregarProdutosPaginaProduto,
   carregarDadosProdutoPesquisado,
+  carregarDadosPaginaEdicao,
   alterarTitleConsultaProduto,
   retornarDadosProduto
 }
