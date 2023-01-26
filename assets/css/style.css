@@ -61,4 +61,5 @@ a, button{
 
 .label-destaque span{
   font-weight: 500;
+  text-transform: capitalize;
 }
