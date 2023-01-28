@@ -31,16 +31,26 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
     const botoesExclui = document.querySelectorAll('[data-botao-excluir-produto]');
     botoesExclui.forEach(botao => {
       botao.addEventListener('click', (evento) => {
+
+        const produto = (botao.closest('[data-produto]'));
         
         const id = botao.dataset.botaoExcluirProduto;
-        verificarIDProduto(id) ? exibirModalConfirmacaoExclusao(id) : console.log('O ID informado não é válido!');
+        verificarIDProduto(id) ? exibirModalConfirmacaoExclusao(id, produto) : console.log('O ID informado não é válido!');
 
         evento.preventDefault();
       })
     });
   }
 
-  const exibirModalConfirmacaoExclusao = (id) => {
+  const controleConfirmacaoExclusao = (modal, produto) => {
+    const btnConfirma = modal.querySelector('[data-modal-confirmacao]');
+    btnConfirma.addEventListener('click', () => {
+      produto.remove();
+      modal.close();
+    })
+  }
+
+  const exibirModalConfirmacaoExclusao = (id, produto) => {
     const modal = document.querySelector('[data-modal-exclui-produto]');
     modal.showModal();
 
@@ -49,6 +59,7 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
     modal.querySelector('[data-input-dados-produto="categoria"]').textContent = dados.categoria;
 
     controleFechamentoModal(modal);
+    controleConfirmacaoExclusao(modal, produto)
   }
 
   async function carregarProdutos(){
