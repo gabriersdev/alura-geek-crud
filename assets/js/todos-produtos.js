@@ -9,6 +9,7 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
       const figure = produto.querySelector('figure');
 
       const botaoExcluir = document.createElement('a');
+      botaoExcluir.href = '#';
       botaoExcluir.innerHTML = '<i class="bi bi-trash"></i>';
       botaoExcluir.classList.value = 'controle__crud__btn-exclui';
       botaoExcluir.dataset.botaoExcluirProduto = `${produto.dataset.produto}`;
@@ -31,7 +32,7 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
     const botoesExclui = document.querySelectorAll('[data-botao-excluir-produto]');
     botoesExclui.forEach(botao => {
       botao.addEventListener('click', (evento) => {
-
+        console.log('clicou');
         const produto = (botao.closest('[data-produto]'));
         
         const id = botao.dataset.botaoExcluirProduto;
@@ -65,9 +66,9 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
   const carregarProdutos = async () => {
     await carregarTodosProdutos();
     await adicionarControlesCRUD();
+    await acoesControlesCRUD();
   }
 
   carregarProdutos();
-  acoesControlesCRUD();
 
 })();
