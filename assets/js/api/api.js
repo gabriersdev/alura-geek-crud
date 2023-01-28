@@ -12,5 +12,5 @@ const listarProdutos = () => {
 }
 
 export const api = {
-  listarProdutoss
+  listarProdutos
 }
