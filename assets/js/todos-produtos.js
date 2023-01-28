@@ -1,5 +1,5 @@
 import { carregarTodosProdutos, retornarDadosProduto } from "./modulos/carregar-exibicao.js"
-import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitarios.js";
+import { controleFechamentoModal, exibirModalFeedback, verificarIDProduto } from "./modulos/utilitarios.js";
 
 ( ()  => {
 
@@ -45,6 +45,13 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
   const controleConfirmacaoExclusao = (modal, produto) => {
     const btnConfirma = modal.querySelector('[data-modal-confirmacao]');
     btnConfirma.addEventListener('click', () => {
+
+      if(true){
+        exibirModalFeedback('sucesso', 'Exclusão concluída!');
+      }else{
+        exibirModalFeedback('erro', 'Ocorreu um erro!');
+      }
+
       produto.remove();
       modal.close();
     })

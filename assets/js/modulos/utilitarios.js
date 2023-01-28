@@ -56,10 +56,12 @@ const exibirModalFeedback = (condicao, titulo) => {
     icone = `<i class="bi bi-x-circle feedback erro"></i>`;
   }
 
-  importacao.innerHTML += `<dialog class="modal" data-modal-feedback><div class="modal-feedback scale-in-center">${icone}<h1>${titulo}</h1></div></dialog>`;
+  importacao.innerHTML += `<dialog class="modal" data-modal-feedback><div class="modal-feedback scale-in-center">${icone}<h2>${titulo}</h2></div><button data-modal-fecha class='modal__botao'>OK</button></dialog>`;
 
   const modal = document.querySelector('[data-modal-feedback]');
+  modal.close();
   modal.showModal();
+  controleFechamentoModal(modal);
 }
 
 const isEmpty = (valor) => {
