@@ -1,7 +1,7 @@
 import { retornarDadosProduto, carregarDadosPaginaEdicao } from './modulos/carregar-exibicao.js';
 import { mascararCamposMonetarios, redirecionarPaginaErro, isEmpty } from './modulos/utilitarios.js'
 
-(() => {
+(async () => {
 
   const preco = document.querySelector('[data-input="preco"]');
   mascararCamposMonetarios(preco);
@@ -10,7 +10,7 @@ import { mascararCamposMonetarios, redirecionarPaginaErro, isEmpty } from './mod
 
   if(isEmpty(dadosGET.get('id'))){
 
-    const dados = retornarDadosProduto(dadosGET.get('id'));
+    const dados = await retornarDadosProduto(dadosGET.get('id'));
 
     if(dados !== false){
       carregarDadosPaginaEdicao(dados);

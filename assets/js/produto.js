@@ -1,8 +1,8 @@
+import { api } from "./api/api.js";
 import { carregarProdutosPaginaProduto, carregarDadosProdutoPesquisado, alterarTitleConsultaProduto } from "./modulos/carregar-exibicao.js";
-import { produtosExibicaoHome } from "./modulos/conteudos-produtos.js";
-import { isEmpty, redirecionarPaginaErro, verificarIDProduto } from "./modulos/utilitarios.js";
+import { isEmpty, lengthZero, redirecionarPaginaErro, verificarIDProduto } from "./modulos/utilitarios.js";
 
-(() => {
+(async () => {
 
   const dadosGET = new URLSearchParams(window.location.search);
 
@@ -14,28 +14,29 @@ import { isEmpty, redirecionarPaginaErro, verificarIDProduto } from "./modulos/u
     idGET = dadosGET.get('id').toLowerCase();
 
     let categoria = null;
+    const produtos = await api.listarProdutos();
 
     switch(nomeCategoria){
       case 'star-wars':
-        categoria = produtosExibicaoHome.filter(produto => produto.categoria == 'starWars');
+        categoria = produtos.filter(produto => produto.categoria == 'starWars');
         break;
   
       case 'consoles':
-        categoria = produtosExibicaoHome.filter(produto => produto.categoria == 'consoles');
+        categoria = produtos.filter(produto => produto.categoria == 'consoles');
         break;
       
       case 'diversos':
-        categoria = produtosExibicaoHome.filter(produto => produto.categoria == 'diversos');
+        categoria = produtos.filter(produto => produto.categoria == 'diversos');
         break;
     }
 
-    const dadosProduto = verificarIDProduto(idGET) ? produtosExibicaoHome[idGET] : undefined;
-    const ehValido = (isEmpty(dadosProduto));
+    const dadosProduto = await api.pesquisarProduto(idGET);
+    const ehValido = (isEmpty(dadosProduto) && lengthZero(dadosProduto));
 
     if(ehValido){
       carregarProdutosPaginaProduto(categoria, nomeCategoria);
-      carregarDadosProdutoPesquisado(dadosProduto);
-      alterarTitleConsultaProduto(dadosProduto);
+      carregarDadosProdutoPesquisado(dadosProduto[0]);
+      alterarTitleConsultaProduto(dadosProduto[0]);
     }
 
     else{

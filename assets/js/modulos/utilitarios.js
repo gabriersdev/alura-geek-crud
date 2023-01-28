@@ -1,4 +1,4 @@
-import { produtosExibicaoHome } from "./conteudos-produtos.js";
+import { api } from "../api/api.js";
 
 const converterParaMesBRL = (numero) => {
   let mes = null;
@@ -45,12 +45,17 @@ const controlarModal = () => {
   });
 }
 
-const verificarIDProduto = (id) => {
-  return produtosExibicaoHome[id] !== undefined && produtosExibicaoHome[id] !== null;
-}
-
 const isEmpty = (valor) => {
   return valor !== undefined && valor !== null;
+}
+
+const lengthZero = (string) => {
+  return string.length > 0;
+}
+
+const verificarIDProduto = async (id) => {
+  const produto = await api.pesquisarProduto(id);
+  return isEmpty(produto);
 }
 
 const mascararCamposMonetarios = (campo) => {
@@ -77,6 +82,7 @@ export{
   converterValor,
   redirecionarPaginaErro,
   isEmpty,
+  lengthZero,
   mascararCamposMonetarios,
   verificarIDProduto
 }

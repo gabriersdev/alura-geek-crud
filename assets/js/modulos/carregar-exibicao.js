@@ -1,17 +1,22 @@
-import { produtosExibicaoHome } from "./conteudos-produtos.js";
+import { api } from "../api/api.js";
 import { criarCardProdutosExibicaoHome, criarSecaoProdutos } from './criar-elementos-exibicao.js'
 import { converterValor } from "./utilitarios.js";
 
-const carregarProdutosHome = () => {
-  criarSecaoProdutos('Star Wars', carregar(produtosExibicaoHome.filter(produto => produto.categoria == 'starWars'), 'Star Wars'));
-  criarSecaoProdutos('Consoles', carregar(produtosExibicaoHome.filter(produto => produto.categoria == 'consoles'), 'Consoles'));
-  criarSecaoProdutos('Diversos', carregar(produtosExibicaoHome.filter(produto => produto.categoria == 'diversos'), 'Diversos'));
+const carregarProdutosHome = async () => {
+
+  const produtos = await (api.listarProdutos());
+
+  criarSecaoProdutos('Star Wars', carregar(produtos.filter(produto => produto.categoria == 'starWars'), 'Star Wars'));
+  criarSecaoProdutos('Consoles', carregar(produtos.filter(produto => produto.categoria == 'consoles'), 'Consoles'));
+  criarSecaoProdutos('Diversos', carregar(produtos.filter(produto => produto.categoria == 'diversos'), 'Diversos'));
 }
 
-const carregarTodosProdutos = () => {
+const carregarTodosProdutos = async () => {
   const produtos = new Array;
 
-  produtosExibicaoHome.forEach(produto => {
+  const listaProdutos = await api.listarProdutos();
+
+  listaProdutos.forEach(produto => {
     let categoriaURL;
 
     switch(produto.categoria){
@@ -54,8 +59,9 @@ const carregarDadosPaginaEdicao = (dados) => {
   formulario.querySelector(`[data-input="descricao"]`).value = dados.descricao;
 }
 
-const retornarDadosProduto = (id) => {
-  const produto = produtosExibicaoHome[id];
+const retornarDadosProduto = async (id) => {
+  let produto = await api.pesquisarProduto(id);
+  produto = produto[0];
 
   if(produto == null){
     return false;

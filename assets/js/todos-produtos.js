@@ -62,9 +62,8 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
     controleConfirmacaoExclusao(modal, produto)
   }
 
-  async function carregarProdutos(){
-    carregarTodosProdutos();
-
+  const carregarProdutos = async () => {
+    await carregarTodosProdutos();
     await adicionarControlesCRUD();
   }
 
