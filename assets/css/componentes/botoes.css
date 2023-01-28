@@ -81,10 +81,13 @@
   border-color: #BBB;
 }
 
+.modal__botao{
+  margin-left: 0.5rem;
+}
+
 .modal__botao-confirmacao{
   background-color: rgba(255, 0, 0, 0.2);
   border-color: var(--vermelho);
-  margin-left: 0.5rem;
 }
 
 .modal__botao-confirmacao:hover{
