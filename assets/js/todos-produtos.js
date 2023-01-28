@@ -32,7 +32,6 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
     const botoesExclui = document.querySelectorAll('[data-botao-excluir-produto]');
     botoesExclui.forEach(botao => {
       botao.addEventListener('click', (evento) => {
-        console.log('clicou');
         const produto = (botao.closest('[data-produto]'));
         
         const id = botao.dataset.botaoExcluirProduto;
@@ -51,13 +50,13 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
     })
   }
 
-  const exibirModalConfirmacaoExclusao = (id, produto) => {
+  const exibirModalConfirmacaoExclusao = async (id, produto) => {
     const modal = document.querySelector('[data-modal-exclui-produto]');
     modal.showModal();
 
-    const dados = retornarDadosProduto(id);
-    modal.querySelector('[data-input-dados-produto="nome"]').textContent = dados.nomeProduto;
-    modal.querySelector('[data-input-dados-produto="categoria"]').textContent = dados.categoria;
+    const dados = await retornarDadosProduto(id);
+    modal.querySelector('[data-input-dados-produto="nome"]').textContent = await dados.nomeProduto;
+    modal.querySelector('[data-input-dados-produto="categoria"]').textContent = await dados.categoria;
 
     controleFechamentoModal(modal);
     controleConfirmacaoExclusao(modal, produto)
