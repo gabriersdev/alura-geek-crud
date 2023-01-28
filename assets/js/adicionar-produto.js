@@ -13,16 +13,20 @@ import { exibirModalFeedback, mascararCamposMonetarios } from './modulos/utilita
   let tudoValido = false;
 
   formulario.addEventListener('keyup', (evento) => {
-
     valores = new Array();
 
     inputs.forEach(input => {
       tudoValido = input.validity.valid;
       valores.push(input.value);
     })
+
+    evento.preventDefault();
   })
 
-  formulario.querySelector('button[type=submit]').addEventListener('click', () => {
+  formulario.querySelector('button[type=submit]').addEventListener('click', (evento) => {
+
+    evento.preventDefault();
+
     if(tudoValido){
 
       const dados = {
@@ -34,10 +38,9 @@ import { exibirModalFeedback, mascararCamposMonetarios } from './modulos/utilita
       }
 
       if(api.criarProduto(dados)){
-        exibirModalFeedback('sucesso', 'Tudo certo!');
-        window.location.href = './todos-produtos.html';
+        exibirModalFeedback('sucesso', 'Tudo certo!', './todos-produtos.html');
       }else{
-        exibirModalFeedback('erro', 'Ocorreu um erro');
+        exibirModalFeedback('erro', 'Ocorreu um erro', null);
         window.location.reload();
       }
     }

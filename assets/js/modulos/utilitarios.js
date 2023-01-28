@@ -45,7 +45,7 @@ const controlarModal = () => {
   });
 }
 
-const exibirModalFeedback = (condicao, titulo) => {
+const exibirModalFeedback = (condicao, titulo, link) => {
   const importacao = document.querySelector('[data-importacoes-html]');
   let icone = '';
 
@@ -61,7 +61,19 @@ const exibirModalFeedback = (condicao, titulo) => {
   const modal = document.querySelector('[data-modal-feedback]');
   modal.close();
   modal.showModal();
-  controleFechamentoModal(modal);
+
+  const btnFecha = modal.querySelector('[data-modal-fecha]');
+  btnFecha.addEventListener('click', () => {
+
+    modal.close();
+
+    if(isEmpty(link)){
+      window.location.href = link;
+    }else{
+      window.location.reload();
+    }
+  })
+
 }
 
 const isEmpty = (valor) => {

@@ -1,20 +1,20 @@
 {
   "produtos": [
     {
-      "id": 0,
       "imagem": "https://gabrieszin.github.io/Alura-Geek/assets/img/produtos/canecasw.png",
       "nomeProduto": "Caneca",
-      "valor": 60,
+      "valor": "R$ 65,00",
       "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!",
-      "categoria": "starWars"
+      "categoria": "starWars",
+      "id": 0
     },
     {
-      "id": 1,
       "imagem": "https://gabrieszin.github.io/Alura-Geek/assets/img/produtos/legosw.png",
       "nomeProduto": "Lego",
-      "valor": 60,
+      "valor": "R$ 65,00",
       "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!",
-      "categoria": "starWars"
+      "categoria": "starWars",
+      "id": 1
     },
     {
       "id": 2,
