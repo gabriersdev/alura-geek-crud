@@ -23,7 +23,33 @@ const pesquisarProduto = (id) => {
   })
 }
 
+const criarProduto = ({URLProduto, categoria, nome, valor, descricao}) => {
+  return fetch('http://localhost:3000/produtos', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      imagem: URLProduto,
+      nomeProduto: nome,
+      valor: valor,
+      descricao: descricao,
+      categoria: categoria
+    })
+  })
+
+  .then(response => {
+    return true;
+  })
+
+  .catch(erro => {
+    console.log(`Erro ${erro}`);
+    return false;
+  })
+}
+
 export const api = {
   listarProdutos,
-  pesquisarProduto
+  pesquisarProduto,
+  criarProduto
 }
