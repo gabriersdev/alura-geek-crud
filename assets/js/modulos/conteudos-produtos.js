@@ -145,6 +145,22 @@ const produtosExibicaoHome = [
     descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
     categoria: 'diversos',
   },
+  {
+    id: 18,
+    imagem:'./assets/img/produtos/vr.png',
+    nomeProduto: 'Óculos VR',
+    valor: 60.0,
+    descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
+    categoria: 'diversos',
+  },
+  {
+    id: 19,
+    imagem:'./assets/img/produtos/pikachu.png',
+    nomeProduto: 'Picachu',
+    valor: 60.0,
+    descricao: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!',
+    categoria: 'diversos',
+  },
 ]
 
 export{

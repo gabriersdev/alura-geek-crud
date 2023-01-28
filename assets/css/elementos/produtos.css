@@ -95,14 +95,8 @@
   .lista{
     justify-content: center;
   }
-
-  .lista__item:nth-child(2n + 0){
-    display: none;
-  }
 }
 
 @media screen and (min-width: 390px) and (max-width: 767px) {
-  .lista__item:nth-child(4n + 1){
-    display: none;
-  }
+  
 }

@@ -63,6 +63,17 @@
 
   .menu__botao{
     margin-top: 1rem;
+  } 
+}
+
+@media screen and (max-width: 380px) {
+  .menu{
+    padding: 1rem;
   }
-  
+
+  .menu__form-group__input,
+  .menu__form-group__botao{
+    padding: 0.5rem;
+    max-width: 70%;
+  }
 }

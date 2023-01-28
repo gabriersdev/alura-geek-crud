@@ -1,4 +1,4 @@
-import { carregarProdutosHome, retornarDadosProduto } from "./modulos/carregar-exibicao.js"
+import { carregarTodosProdutos, retornarDadosProduto } from "./modulos/carregar-exibicao.js"
 import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitarios.js";
 
 ( ()  => {
@@ -63,7 +63,7 @@ import { controleFechamentoModal, verificarIDProduto } from "./modulos/utilitari
   }
 
   async function carregarProdutos(){
-    carregarProdutosHome();
+    carregarTodosProdutos();
 
     await adicionarControlesCRUD();
   }
