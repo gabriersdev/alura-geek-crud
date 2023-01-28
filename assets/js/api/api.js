@@ -48,8 +48,24 @@ const criarProduto = ({URLProduto, categoria, nome, valor, descricao}) => {
   })
 }
 
+const excluirProduto = (id) => {
+  return fetch(`http://localhost:3000/produtos/${id}`, {
+    method: 'DELETE'
+  })
+
+  .then(response => {
+    return true;
+  })
+
+  .catch(erro => {
+    console.log(`Erro ${erro}`);
+    return false;
+  })
+}
+
 export const api = {
   listarProdutos,
   pesquisarProduto,
-  criarProduto
+  criarProduto,
+  excluirProduto
 }

@@ -1,3 +1,4 @@
+import { api } from "./api/api.js";
 import { carregarTodosProdutos, retornarDadosProduto } from "./modulos/carregar-exibicao.js"
 import { controleFechamentoModal, exibirModalFeedback, verificarIDProduto } from "./modulos/utilitarios.js";
 
@@ -42,11 +43,11 @@ import { controleFechamentoModal, exibirModalFeedback, verificarIDProduto } from
     });
   }
 
-  const controleConfirmacaoExclusao = (modal, produto) => {
+  const controleConfirmacaoExclusao = (modal, produto, id) => {
     const btnConfirma = modal.querySelector('[data-modal-confirmacao]');
     btnConfirma.addEventListener('click', () => {
 
-      if(true){
+      if(api.excluirProduto(id)){
         exibirModalFeedback('sucesso', 'Exclusão concluída!');
       }else{
         exibirModalFeedback('erro', 'Ocorreu um erro!');
@@ -66,7 +67,7 @@ import { controleFechamentoModal, exibirModalFeedback, verificarIDProduto } from
     modal.querySelector('[data-input-dados-produto="categoria"]').textContent = await dados.categoria;
 
     controleFechamentoModal(modal);
-    controleConfirmacaoExclusao(modal, produto)
+    controleConfirmacaoExclusao(modal, produto, id)
   }
 
   const carregarProdutos = async () => {
