@@ -40,7 +40,7 @@ import { exibirModalFeedback, mascararCamposMonetarios } from './modulos/utilita
       if(api.criarProduto(dados)){
         exibirModalFeedback('sucesso', 'Tudo certo!', './todos-produtos.html');
       }else{
-        exibirModalFeedback('erro', 'Ocorreu um erro', null);
+        exibirModalFeedback('erro', 'Ocorreu um erro', 'reload');
         window.location.reload();
       }
     }

@@ -51,7 +51,7 @@ import { mascararCamposMonetarios, redirecionarPaginaErro, isEmpty, exibirModalF
           if(api.atualizarProduto(dados, id)){
             exibirModalFeedback('sucesso', 'Produto atualizado!', './todos-produtos.html');
           }else{
-            exibirModalFeedback('erro', 'Ocorreu um erro', null);
+            exibirModalFeedback('erro', 'Ocorreu um erro', 'reload');
           }
         }
       })

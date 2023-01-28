@@ -67,9 +67,9 @@ const exibirModalFeedback = (condicao, titulo, link) => {
 
     modal.close();
 
-    if(isEmpty(link)){
+    if(isEmpty(link) && link !== 'reload'){
       window.location.href = link;
-    }else{
+    }else if(link == 'reload'){
       window.location.reload();
     }
   })
