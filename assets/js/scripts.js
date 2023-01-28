@@ -1,5 +1,6 @@
 import { converterParaMesBRL, controlarModal } from "./modulos/utilitarios.js";
 import { tratarFormulario, confirmacaoFormulario } from "./modulos/tratamento-formulario.js";
+import { api } from "./api/api.js";
 
 (() => 
 {
@@ -49,6 +50,14 @@ import { tratarFormulario, confirmacaoFormulario } from "./modulos/tratamento-fo
   controlarModal();
   tratarFormulario();
   confirmacaoFormulario();
+
+  const renderizar = async () => {
+    const produtos = await (api.listarProdutos());
+    produtos.forEach(produto => {
+      console.log(produto);
+    } )
+  }
+
 
 })();
 
