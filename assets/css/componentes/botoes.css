@@ -81,7 +81,7 @@
   border-color: #BBB;
 }
 
-.modal__botao{
+dialog[data-modal-exclui-produto] .modal__botao{
   margin-left: 0.5rem;
 }
 

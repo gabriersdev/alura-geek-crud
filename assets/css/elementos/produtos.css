@@ -57,6 +57,7 @@
 
 .lista__item__figura__imagem{
   max-width: 176px;
+  max-height: 174px;
 }
 
 .lista__item__figura__descricao h5{ /* Nome do Produto */

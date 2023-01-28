@@ -1,5 +1,5 @@
 import { api } from './api/api.js';
-import { mascararCamposMonetarios } from './modulos/utilitarios.js'
+import { controleFechamentoModal, mascararCamposMonetarios } from './modulos/utilitarios.js'
 
 (() => {
 
@@ -37,11 +37,31 @@ import { mascararCamposMonetarios } from './modulos/utilitarios.js'
 
       if(api.criarProduto(dados)){
         console.log('Mandou');
+        exibirModalFeedback('sucesso', 'Tudo certo!');
+        window.location.replace('./todos-produtos.html');
       }else{
         console.log('Não mandou');
+        exibirModalFeedback('erro', 'Ocorreu um erro');
+        window.location.reload();
       }
-
     }
   })
+
+  const exibirModalFeedback = (condicao, titulo) => {
+    const importacao = document.querySelector('[data-importacoes-html]');
+    let icone = '';
+
+    condicao = condicao.toLowerCase();
+    if(condicao == 'sucesso'){
+      icone = `<i class="bi bi-check-circle-fill feedback sucesso"></i>`;
+    }else{
+      icone = `<i class="bi bi-x-circle feedback erro"></i>`;
+    }
+
+    importacao.innerHTML += `<dialog class="modal" data-modal-feedback><div class="modal-feedback scale-in-center">${icone}<h1>${titulo}</h1></div></dialog>`;
+
+    const modal = document.querySelector('[data-modal-feedback]');
+    modal.showModal();
+  }
 
 })();
