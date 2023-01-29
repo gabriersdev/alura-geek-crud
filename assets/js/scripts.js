@@ -37,6 +37,7 @@ import { api } from "./api/api.js";
       <ul>
         <li>Unsplash</li>
         <li>SVG Repo</li>
+        <li>Animista</li>
         <li>Bootstrap Icons</li>
         <li>Symple Mask Money</li>
       </ul>
