@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"`>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net/ https://cdnjs.cloudflare.com/; img-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; script-src 'self' https://cdnjs.cloudflare.com/;">
+  
+  <meta name="keywords" content="Geek, StarWars, Consoles, E-comerce">
+  <meta name="author" content="Gabriel Ribeiro">
+  <meta property="og:title" content="Instruções para usar o CRUD - Alura Geek">
+  <meta property="og:description" content="#">
+  <meta property="og:url" content="#">
+  
+  <link rel="shortcut icon" href="../assets/img/favicon.svg" type="image/x-icon">
+  
+  <!-- Folha de estilo de CSS Linkado -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/a11y-light.min.css">
+  
+  <!-- Importação da Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  
+  <title>Instruções para usar o CRUD - Alura Geek</title>
+</head>
+<body>
+  
+  <div class="tudo">
+    <header class="cabecalho">
+      <div class="cabecalho__principal">
+        <h1 class="cabecalho__principal__titulo">Alura Geek</h1>
+        
+        <div class="cabecalho__principal__grupo">
+          <h2 class="cabecalho__principal__grupo__titulo">Como usar o CRUD com JSON Server?</h2>
+        </div>
+        
+      </div>
+      
+      <div class="cabecalho__downloads">
+        <p class="cabecalho__downloads__instrucao">
+          Baixe agora mesmo e usufrua de todos os recursos:
+        </p>
+        
+        <a href="https://github.com/gabrieszin/Alura-Geek-CRUD/archive/refs/heads/master.zip" class="cabecalho__downloads__link">Baixar versão .zip</a>
+        
+        <p class="cabecalho__downloads__instrucao">
+          Siga as <a href="#instrucoes-execucao" class="cabecalho__downloads__instrucao-destaque">instruções de uso para usar</a>
+        </p>
+      </div>
+    </header>
+    
+    <main class="conteudo">
+      <section class="instrucao">
+        <div class="instrucao__grupo" id="instrucoes-execucao">
+          <h3 class="instrucao__grupo__titulo">
+            Para usar o
+            <span class="instrucao__grupo__titulo-destaque">CRUD</span>
+          </h3>
+          <span class="instrucao__grupo__linha"></span>
+        </div>
+        
+        <p class="instrucao__descricao">
+          
+          Siga as instruções abaixo com atenção para usar o CRUD <b>no Windows</b>:
+          
+          <ol class="instrucao__descricao__lista">
+            <li>
+              Após fazer o download do arquivo compactado .zip, <b> abra a pasta em que ele foi baixado no seu computador.</b> Geralmente esta pasta é a de Downloads.
+            </li>
+            
+            <li>
+              Descompacte o arquivo, usando um <a href="https://www.techtudo.com.br/noticias/2014/06/como-abrir-um-arquivo-zipado-veja-opcoes-para-pc-mac-ios-e-android.ghtml" target='_blank' class="link-visivel">descompactador de zip</a> ou copiando os arquivos para uma pasta que você deve criar (no caso de um descompactador isso não é necessário).
+            </li>
+            
+            <li>
+              Após ter os arquivos descompactados é necessário que você tenha um editor de texto. Neste tutorial usaremos o <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer" class="link-visivel">Visual Studio Code</a>.
+            </li>
+            
+            <li>
+              Ainda no Explorador de Arquivos, clique com o botão direito do mouse para abrir o menu flutuante. Após aberto e com o Visual Studio Code instalado, clique na opção "Abrir com Code":
+              
+              <img class="instrucao__descricao__lista__imagem" src="./assets/img/menu-flutuante-explorador-arquivos.png" alt="">
+            </li>
+            
+            <li>
+              Caso você ainda não tenha o Node.JS instalado na sua máquina você pode <a href="https://nodejs.org/pt-br/" target="_blank" rel="noopener noreferrer">baixá-lo por aqui</a> e em seguida instalá-lo. <b>Escolha a versão LTS para download.</b>
+            </li>
+            
+            <li>
+              Dentro do Visual Studio Code clique em [CTRL] + [J] para abrir o Terminal. É importante que o caminho que aparecer no Terminal seja a raiz do diretório com os arquivos. Por isso deve aparecer algo do tipo:
+              
+              <div class="codigos">
+                <pre class="codigo"><code class="cmd" contentEditable="false" data-conteudo-codigo>
+                  PS C:\Users\Gabriel\Downloads\sprint-3> 
+                  
+                </code></pre>
+              </div>
+              
+              Observe que o caminho que o Terminal aponta não é um arquivo ou um diretório anterior.
+            </li>
+            
+            <li>
+              Dentro do Terminal, digite a instrução que verifica a verão do Node instalada:
+              
+              <div class="codigos">
+                <pre class="codigo"><code class="cmd" contentEditable="false" data-conteudo-codigo>
+                  node -v
+                  
+                </code></pre>
+              </div>
+              
+              E deverá ser retornado algo do tipo:
+              
+              <div class="codigos">
+                <pre class="codigo"><code class="cmd" contentEditable="false" data-conteudo-codigo>
+                  v18.12.1
+                  
+                </code></pre>
+              </div>
+            </li>
+            
+            <li>
+              Feito isso, ainda no terminal, é necessário iniciar o NPM, com o comando: 
+              
+              <div class="codigos">
+                <pre class="codigo"><code class="cmd" contentEditable="false" data-conteudo-codigo>
+                  npm init
+                  
+                </code></pre>
+              </div>
+              
+              E em seguida o Terminal fará algumas perguntas sobre os dados do pacote, você pode dar [ENTER] para deixar cada informação em branco.
+            </li>
+            
+            <li>
+              Feito isso, ainda no terminal, é necessário iniciar o NPM, com o comando: 
+              
+              <div class="codigos">
+                <pre class="codigo"><code class="cmd" contentEditable="false" data-conteudo-codigo>
+                  npm init
+                  
+                </code></pre>
+              </div>
+              
+              E em seguida o Terminal fará algumas perguntas sobre os dados do pacote, você pode dar [ENTER] para deixar cada informação em branco.
+            </li>
+            
+            <li id="instrucao-10">
+              Ao finalizar o processo um arquivo de nome 'package.json' deverá ser criado. Agora só é preciso iniciar o JSON Server, com o comando: 
+              <div class="codigos">
+                <pre class="codigo"><code class="cmd" contentEditable="false" data-conteudo-codigo>
+                  npx json-server --watch db.json
+                  
+                </code></pre>
+              </div>
+              
+              Se tudo der certo uma mensagem como esta será retornada: 
+              
+              <div class="codigos">
+                <pre class="codigo"><code class="cmd" contentEditable="false" data-conteudo-codigo>
+                  \{^_^}/ hi!
+
+                  Loading db.json
+                  Done
+                  
+                  Resources
+                  http://localhost:3000/produtos
+                  
+                  Home
+                  http://localhost:3000
+                  
+                </code></pre>
+              </div>
+            </li>
+          </ol>
+        </p>
+        
+        <p class="instrucao__descricao">
+          E assim o CRUD já funciona. <br> É importante lembrar que <b>todas as vezes que você fechar o Visual Studio Code,</b> será necessário, dentro do programa dar [CTRL] + [J] (para abrir o Terminal) e o comando <code>npx json-server --watch db.json</code> (para iniciar o JSON Server).
+        </p>
+        
+        <ul class="instrucao__lista">
+          <li class="instrucao__lista__titulo">Resumindo</li>
+          <li class="instrucao__lista__item">Baixe o arquivo compactado</li>
+          <li class="instrucao__lista__item">Descompacte o arquivo e o abra no Visual Studio Code</li>
+          <li class="instrucao__lista__item">Abra o Terminal na raiz do projeto</li>
+          <li class="instrucao__lista__item">É preciso ter o Node.JS instalado</li>
+          <li class="instrucao__lista__item">Inicialize o NPM com o comando <code>npm init</code></li>
+          <li class="instrucao__lista__item"><a href="#instrucao-10" class="link-visivel">Inicialize o JSON Server</a> como o comando <code>npx json-server --watch db.json</code></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  
+  <!-- Sessão de Footer/Rodapé-->
+  <footer class="footer">
+    <div class="footer__rodape">
+      <p class="destaque">Desenvolvido por Gabriel Ribeiro</p>
+      <p class="destaque"><a class="link-visivel" data-direito-autorais>Direitos Autorais</a></p>
+      <p><i class="bi bi-c-circle"></i>&nbsp;<span data-ano-atual>2022</span></p>
+    </div>
+  </footer>
+  
+  <dialog class="modal" data-modal>
+    <h3>Atribuição de Direitos Autorais</h3>
+    
+    <br><p>Para o desenvolvimento deste site foram usados recursos das seguintes bibliotecas e/ou serviços:</p>
+    
+    <ul>
+      <li>10015.io</li>
+      <li>Bootstrap Icons</li>
+    </ul>
+    
+    <button class="modal__botao" data-modal-fecha>Fechar</button>
+  </dialog>
+  
+  <div class="overlay-2">
+    <div class="lds-ring-2"><div></div><div></div><div></div><div></div></div>
+  </div>
+  
+  <noscript>
+    <div class="box-no-script">         
+      <div class="texto-pagina-centralizado-alt">
+        <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o 
+          <span class="destaque-pagina-centralizado">Javascript desabilitado</span></h2><br>
+          
+          <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
+          
+          <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo Expresso Mobilidade</p><br>
+          <button data-recarrega-pagina class="btn btn-lg btn-principal btn-principal-ativado btn-sombra btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
+        </div>
+      </div>
+    </noscript>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/codigos.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,54 @@
+:root{
+  --cor-de-fundo-secundaria: #FFF;
+  --cor-de-fundo: #F6F6F6;
+  --cor-de-fundo-formacao: #EAF2FD;
+  --cor-de-fundo-contato: #EAF2FD;
+
+  --cor-de-link: #000;
+
+  --cor-de-texto: #313131;
+  --cor-de-icone: #313131;
+
+  --cor-de-fundo-botao-1: transparent;
+  --cor-de-borda-botao-1: #2A7AE4;
+  --cor-de-texto-botao-1: #2A7AE4;
+
+  --cor-background-loader: #F5F5F5;
+  --cor-loader: #2A7AE4;
+
+  --cor-background-hover-links: #D3D3D3;
+
+  --tamanho-fonte-texto-normal: 1.2rem;
+  --tamanho-fonte-h1: 3.5rem;
+  --tamanho-fonte-h2: 2.5rem;
+  --tamanho-fonte-h3: 2rem;
+  --tamanho-fonte-h4: 1.5rem;
+
+  --tamanho-margem: 5rem;
+
+  --branco: #FFF;
+  --cinza-claro: #D3D3D3;
+  --verde-agua: #2A7AE4;
+
+  --cor-de-fundo-botao-copiar: rgb(0, 0, 0, 0.2);
+  --cor-de-conteudo-botao-copiar: #808080;
+  --cor-de-conteudo-botao-copiar-sucesso: #30C12D;
+  --cor-de-conteudo-botao-copiar-erro: #DA3400;
+  --cor-de-fundo-botao-copiar-hover: rgb(0, 0, 0, 0.3);
+  --cor-de-conteudo-botao-copiar-hover: #000;
+}
+
+@media screen and (max-width: 767px) {
+  :root{
+    --tamanho-margem: 1.5rem;
+    --tamanho-fonte-h1: 2.5rem;
+    --tamanho-fonte-h2: 2rem;
+    --tamanho-fonte-h3: 2rem;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+  :root{
+    --tamanho-margem: 3rem;
+  }
+}

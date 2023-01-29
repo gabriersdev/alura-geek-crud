@@ -1,0 +1,17 @@
+.modal__botao,
+.btn-principal-no-script{
+  cursor: pointer;
+  outline: none;
+  background-color: #E6E6E6;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.modal__botao:hover,
+.btn-principal-no-script:hover{
+  background-color: #DDD;
+  border-color: #BBB;
+}

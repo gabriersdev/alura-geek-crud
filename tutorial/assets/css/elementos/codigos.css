@@ -1,0 +1,50 @@
+.codigos{
+  width: 100%;
+}
+
+.codigo{
+  margin: 0;
+  position: relative;
+  white-space: pre-line;
+  margin: 2rem 0;
+  border: 1px solid var(--cinza-claro);
+  border-radius: 5px;
+  background-color: var(--cor-de-fundo); 
+}
+
+code{
+  font-size: 1rem;
+  border-radius: 5px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.codigo__btn-copiar{
+  background-color: var(--cor-de-fundo-botao-copiar);
+  color: var(--cor-de-conteudo-botao-copiar);
+  font-size: 1.5rem;
+  border: none;
+  
+  padding: 0.5rem;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  transition: 0.3s;
+}
+
+.codigo__btn-copiar:hover{
+  background-color: var(--cor-de-fundo-botao-copiar-hover);
+  color: var(--cor-de-conteudo-botao-copiar-hover);
+}
+
+.codigo__btn-copiar.sucesso{
+  color: var(--cor-de-conteudo-botao-copiar-sucesso);
+}
+
+.codigo__btn-copiar.erro{
+  color: var(--cor-de-conteudo-botao-copiar-erro);
+}
