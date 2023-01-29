@@ -1,6 +1,6 @@
 import { api } from "./api/api.js";
 import { carregarProdutosPaginaProduto, carregarDadosProdutoPesquisado, alterarTitleConsultaProduto } from "./modulos/carregar-exibicao.js";
-import { isEmpty, lengthZero, redirecionarPaginaErro, verificarIDProduto } from "./modulos/utilitarios.js";
+import { isEmpty, lengthZero, redirecionarPaginaErro } from "./modulos/utilitarios.js";
 
 (async () => {
 

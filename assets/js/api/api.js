@@ -1,4 +1,3 @@
-
 const listarProdutos = () => {
   return fetch('http://localhost:3000/produtos')
   .then((response) => {
