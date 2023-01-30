@@ -71,10 +71,6 @@
     padding: 1rem;
   }
 
-  .menu__form-group{
-    max-width: 100%;
-  }
-
   .menu__form-group__input,
   .menu__form-group__botao{
     padding: 0.5rem;
