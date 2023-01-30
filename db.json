@@ -49,12 +49,12 @@
       "categoria": "starWars"
     },
     {
-      "id": 6,
       "imagem": "https://gabrieszin.github.io/Alura-Geek/assets/img/produtos/jsxbox.png",
       "nomeProduto": "Controle XBOX",
-      "valor": 60,
+      "valor": "R$ 300,00",
       "descricao": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis quia quis minima incidunt dolores sequi facilis veniam explicabo quae necessitatibus. Nihil expedita iure quae non harum? Aperiam ex aut nam!",
-      "categoria": "consoles"
+      "categoria": "consoles",
+      "id": 6
     },
     {
       "id": 7,
