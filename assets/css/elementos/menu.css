@@ -72,7 +72,7 @@
   }
 
   .menu__form-group{
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .menu__form-group__input,
