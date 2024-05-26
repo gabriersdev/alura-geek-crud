@@ -16,6 +16,6 @@ Recursos implementados no Alura Geek:
   <li>Formuário de contato</li>
 </ul>
 
-O CRUD funciona através do JSON Server. Para configurar e habilitar esse recurso, acesse: <a href='https://gabrieszin.github.io/Alura-Geek-CRUD/tutorial'>https://gabrieszin.github.io/Alura-Geek-CRUD/tutorial</a>
+O CRUD funciona através do JSON Server. Para configurar e habilitar esse recurso, acesse: <a href='https://gabriersdev.github.io/Alura-Geek-CRUD/tutorial'>https://gabriersdev.github.io/Alura-Geek-CRUD/tutorial</a>
 
 <p>
